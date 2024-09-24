@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 # Create your views here.
 
@@ -17,3 +18,6 @@ def contactView(request):
 
 def cartView(request):
     return HttpResponse("This is cart view")
+
+class homeView(TemplateView):
+    template_name = 'index.html'
