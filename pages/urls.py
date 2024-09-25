@@ -5,8 +5,8 @@ from pages.views import cartView,contactView
 
 
 urlpatterns = [
-    path('home/', homeView.as_view()),
-    path('about/', aboutView),
-    path('contact/', contactView),
-    path('cart/', cartView)
+    path('', homeView),
+    path('about/', aboutView, name='about'),
+    path('contact/', contactView, name='contact'),
+    path('cart/', cartView, name='cart')
 ]
